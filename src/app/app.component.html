@@ -1,0 +1,67 @@
+
+<header>
+   <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <h1>{{nameTask}}</h1>
+</header>
+<main>
+<!--#############################################################-->
+<!--#################   First todo   ############################-->
+<!--#############################################################-->
+
+<todo1></todo1>
+
+<!--#############################################################-->
+<!--#################   Second todo   ###########################-->
+<!--#############################################################-->
+
+<div style="text-align:center">
+  <h2>
+    Second todo
+  </h2>
+  <h3>
+    Reminders
+  </h3>
+  <input class="inputRem" #textAdd type="text" name="">
+  <button class="buttonRem" (click)="myRemAdd(textAdd.value); textAdd.value=''" >Add new reminder</button>
+</div>
+
+<section class="todo-remindersList">
+  <ul>
+    <li *ngFor="let i of remindersList; let nomi = index"
+      [class.myClassRemFalse]="i.status==false"
+      [class.myClassRemTrue]="i.status==true"
+      (click)="myRem(i)"
+     >  
+      <input *ngIf="i.status==true"  type="checkbox" checked="checked"/>
+      <input *ngIf="i.status==false"  type="checkbox"/>
+      {{i.name}}
+     </li> 
+  </ul>
+</section>
+<p></p>
+<!--#############################################################-->
+<!--#################   the third todo   ###########################-->
+<!--#############################################################-->
+
+<div style="text-align:center">
+  <h2>
+    the third todo
+  </h2>
+</div>
+
+<div id="example"></div>
+
+<script>
+  ReactDOM.render (
+    <div><h3>112111111111111111111111111111 </h3></div>, 
+    document.getElementById("example")
+  );
+</script>
+
+
+
+
+</main>
+

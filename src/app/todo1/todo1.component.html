@@ -1,0 +1,31 @@
+
+<div style="text-align:center">
+  <h2>
+    First todo
+  </h2>
+  <h3>
+    Enter the name of the new variable, then inc, dec or delete it
+  </h3>
+  
+</div>
+
+<section class="todo-list">
+  <input #textAdd type="text" name="">
+  <button (click)="myMetAdd(textAdd.value); textAdd.value=''" >ADD</button>
+  <ul>
+    <li *ngFor="let i of db; let nomi = index"
+     
+      [class.myClassRed0]="i.qual==0"
+      [class.myClassRed3]="(i.qual>0)&&(i.qual<=3)"
+      [class.myClassRed5]="(i.qual>3)&&(i.qual<=5)"
+      [class.myClassRed]="(i.qual>5)&&(i.qual<=10)"
+      [class.myClassGreen]="i.qual>10" 
+     >
+      {{i.name}}  =  {{i.qual}}
+      <button (click)="myMetInc(i)" >   INC   </button>
+      <button (click)="myMetDec(i)" >   DEC   </button>
+      <button (click)="myMetDel(nomi)" >   DEL   </button>
+     </li> 
+  </ul>
+</section>
+
