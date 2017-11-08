@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  nameTask: string = 'My test todo list';
+  myTextHeader: string = 'My tests on angular';
   masTest = [
       'a',
     'b',
